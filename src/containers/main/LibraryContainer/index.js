@@ -1,10 +1,15 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, ScrollView, StyleSheet} from 'react-native';
+import LibraryHeader from '../../../components/headers/LibraryHeader';
+import LibraryTopShowcase from '../../../components/showcases/LibraryTopShowcase';
 
 export default function LibraryContainer() {
   return (
     <View style={styles.container}>
-      <Text>Library Container</Text>
+      <LibraryHeader />
+      <ScrollView>
+        <LibraryTopShowcase />
+      </ScrollView>
     </View>
   );
 }
@@ -12,7 +17,6 @@ export default function LibraryContainer() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'rgb(15,15,15)',
   },
 });

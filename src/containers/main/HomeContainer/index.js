@@ -1,18 +1,32 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import HomeHeader from '../../../components/headers/HomeHeader';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default function HomeContainer() {
   return (
-    <View style={styles.container}>
-      <HomeHeader />
-      <Text>Home Container</Text>
-    </View>
+    <LinearGradient
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      colors={[
+        'rgb(51, 65, 65)',
+        'rgb(40, 40, 40)',
+        'rgb(25, 25, 25)',
+        'rgb(20, 20, 20)',
+        'rgb(17, 17, 17)',
+        'rgb(13, 13, 13)',
+      ]}
+      style={styles.container}>
+      <ScrollView>
+        <HomeHeader />
+      </ScrollView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'rgb(17, 17, 17)',
   },
 });

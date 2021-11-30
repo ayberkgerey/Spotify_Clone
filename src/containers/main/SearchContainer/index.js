@@ -1,10 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, StyleSheet} from 'react-native';
+import SearchHeader from '../../../components/headers/SearchHeader';
+import TopGenre from '../../../components/genreGrids/TopGenre';
+import BrowseAll from '../../../components/genreGrids/BrowseAll';
 
 export default function SearchContainer() {
   return (
     <View style={styles.container}>
-      <Text>Search Container</Text>
+      <ScrollView>
+        <SearchHeader />
+        <TopGenre />
+        <BrowseAll />
+      </ScrollView>
     </View>
   );
 }
@@ -12,7 +19,6 @@ export default function SearchContainer() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'rgb(15,15,15)',
   },
 });
