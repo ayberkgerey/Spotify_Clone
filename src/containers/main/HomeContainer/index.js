@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import HomeHeader from '../../../components/headers/HomeHeader';
 import LinearGradient from 'react-native-linear-gradient';
+import HomeTopShowcase from '../../../components/showcases/HomeTopShowcase';
 
 export default function HomeContainer() {
   return (
@@ -19,6 +20,7 @@ export default function HomeContainer() {
       style={styles.container}>
       <ScrollView>
         <HomeHeader />
+        <HomeTopShowcase />
       </ScrollView>
     </LinearGradient>
   );

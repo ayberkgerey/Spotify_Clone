@@ -1,12 +1,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import TabNavigation from './src/navigations/TabNavigation';
-import EntranceNavigation from './src/navigations/StackNavigation/EntranceNavigation';
+import StackNavigation from './src/navigations/StackNavigation';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <EntranceNavigation />
+      <StackNavigation />
     </NavigationContainer>
   );
 }

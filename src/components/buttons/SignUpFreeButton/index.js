@@ -1,9 +1,15 @@
 import React from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {useNavigation} from '@react-navigation/core';
 
 export default function SignUpFreeButton() {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => {
+        navigation.navigate('SignUp');
+      }}>
       <Text style={styles.buttonTitle}>Sign up free</Text>
     </TouchableOpacity>
   );

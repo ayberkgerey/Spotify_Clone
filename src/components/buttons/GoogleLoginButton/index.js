@@ -1,11 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/core';
 
 export default function GoogleLoginButton() {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => {
+        navigation.navigate('Tab');
+      }}>
       <AntDesign name={'google'} size={25} color={'white'} />
       <Text style={styles.buttonTitle}>Continue With Google</Text>
     </TouchableOpacity>

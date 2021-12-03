@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-export default function RecentlyPlayed() {
+export default function RecentlyPlayedLibraryShowcase() {
   return (
     <View style={styles.container}>
       <View>

@@ -6,16 +6,16 @@ export default function HomeHeader() {
   const niceWord = () => {
     const time = new Date().getHours();
     console.log(time);
-    if (time < 6) {
+    if (time >= 21 || time < 5) {
       return 'Good night';
     }
-    if (time >= 6 && time < 12) {
+    if (time >= 5 && time < 12) {
       return 'Good morning';
     }
-    if (time >= 12 && time < 17) {
+    if (time >= 12 && time <= 16) {
       return 'Good afternoon';
     }
-    if (time >= 18 && time < 24) {
+    if (time >= 17 && time < 21) {
       return 'Good evening';
     }
   };

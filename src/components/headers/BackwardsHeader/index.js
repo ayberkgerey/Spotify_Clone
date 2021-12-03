@@ -11,7 +11,7 @@ export default function BackwardsHeader() {
         onPress={() => {
           navigation.goBack();
         }}>
-        <AntDesign name={'arrowleft'} size={20} color={'white'} />
+        <AntDesign name={'arrowleft'} size={25} color={'white'} />
       </TouchableOpacity>
     </View>
   );

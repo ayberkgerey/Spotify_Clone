@@ -2,7 +2,7 @@ import React from 'react';
 import {View, ScrollView, StyleSheet} from 'react-native';
 import LibraryHeader from '../../../components/headers/LibraryHeader';
 import LibraryTopShowcase from '../../../components/showcases/LibraryTopShowcase';
-import RecentlyPlayed from '../../../components/showcases/RecentlyPlayed';
+import RecentlyPlayedLibraryShowcase from '../../../components/showcases/RecentlyPlayedLibraryShowcase';
 
 export default function LibraryContainer() {
   return (
@@ -11,7 +11,7 @@ export default function LibraryContainer() {
       <ScrollView>
         <LibraryTopShowcase />
         <View style={styles.splitLine} />
-        <RecentlyPlayed />
+        <RecentlyPlayedLibraryShowcase />
       </ScrollView>
     </View>
   );
