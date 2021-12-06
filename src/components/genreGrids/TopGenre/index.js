@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import GenreCard from '../../cards/GenreCard';
 
 export default function TopGenre() {
   return (
@@ -7,20 +8,12 @@ export default function TopGenre() {
       <Text style={styles.title}>Your top genres</Text>
       <View style={styles.gridContainer}>
         <View style={styles.inlineRow}>
-          <TouchableOpacity style={styles.cardContainer1}>
-            <Text style={styles.cardTitle}>Rock</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cardContainer2}>
-            <Text style={styles.cardTitle}>Pop</Text>
-          </TouchableOpacity>
+          <GenreCard color={"'rgb(201,0,35)'"} title={'Rock'} />
+          <GenreCard color={"'rgb(110,73,141)'"} title={'Pop'} />
         </View>
         <View style={styles.inlineRow}>
-          <TouchableOpacity style={styles.cardContainer3}>
-            <Text style={styles.cardTitle}>Folk Acoustic</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.cardContainer4}>
-            <Text style={styles.cardTitle}>Indian-Pop</Text>
-          </TouchableOpacity>
+          <GenreCard color={"'rgb(22,33,76)'"} title={'Folk Acoustic'} />
+          <GenreCard color={"'rgb(156,67,9)'"} title={'Indian Pop'} />
         </View>
       </View>
     </View>
@@ -36,42 +29,9 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '700',
   },
-  gridContainer: {},
   inlineRow: {
     marginTop: 13,
     flexDirection: 'row',
     justifyContent: 'space-around',
-  },
-  cardTitle: {
-    color: 'white',
-    fontWeight: '600',
-  },
-  cardContainer1: {
-    padding: 8,
-    borderRadius: 6,
-    width: 180,
-    height: 95,
-    backgroundColor: 'rgb(201,0,35)',
-  },
-  cardContainer2: {
-    padding: 8,
-    borderRadius: 6,
-    width: 180,
-    height: 95,
-    backgroundColor: 'rgb(110,73,141)',
-  },
-  cardContainer3: {
-    padding: 8,
-    borderRadius: 6,
-    width: 180,
-    height: 95,
-    backgroundColor: 'rgb(22,33,76)',
-  },
-  cardContainer4: {
-    padding: 8,
-    borderRadius: 6,
-    width: 180,
-    height: 95,
-    backgroundColor: 'rgb(156,67,9)',
   },
 });
