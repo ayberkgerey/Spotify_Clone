@@ -3,6 +3,11 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import HomeHeader from '../../../components/headers/HomeHeader';
 import LinearGradient from 'react-native-linear-gradient';
 import HomeTopShowcase from '../../../components/showcases/HomeTopShowcase';
+import {YourShowsShowcase} from '../../../components/showcases';
+import MadeForYouShowcase from '../../../components/showcases/MadeForYouShowcase';
+import YourPlaylistsShowcase from '../../../components/showcases/YourPlaylistsShowcase';
+import PopularArtistsCard from '../../../components/cards/PopularArtistsCard';
+import PopularArtistsShowcase from '../../../components/showcases/PopularArtistsShowcase';
 
 export default function HomeContainer() {
   return (
@@ -21,6 +26,10 @@ export default function HomeContainer() {
       <ScrollView>
         <HomeHeader />
         <HomeTopShowcase />
+        <YourShowsShowcase />
+        <PopularArtistsShowcase />
+        <MadeForYouShowcase />
+        <YourPlaylistsShowcase />
       </ScrollView>
     </LinearGradient>
   );
